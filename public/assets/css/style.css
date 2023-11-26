@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(/assets/css/login.css);
+@import url(/assets/css/features.css);
+@import url(/assets/css/globals.css);
+@import url(/assets/css/contact.css);
+@import url(/assets/css/nav.css);
+@import url(/assets/css/hero.css);  
+
+
+/* layout */
+.grid-container {
+    --max-width: 80em;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    overflow-x: hidden;
+    transition: .5s;
+  }
+
+  .grid-container.active {
+    filter: blur(20px);
+    pointer-events: none;
+    transition: .5s;
+  }
+
+
+/* alerting popup */
+.alerting {
+  z-index: 15;
+  position: absolute;
+  top: -10%;
+  transform: translate(80%, 5px);
+  transition: .8s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.alerting.active {
+  top: 0%;
+  transition: .8s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.alert-popup { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9c1b8;
+  width: 400px;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid red;
+}
+
+.alert-popup {
+  color: rgb(144, 15, 15);
+}
+
+.incorrect {
+  margin-top: 14rem;
+}
+
+.incorrect__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.incorrect__text h1 {
+  font-weight: 600;
+  letter-spacing: -1px;
+  transform: skewX(-5deg);
+}
+
+#elementsecond {
+  font-size: 96px;
+}
+
+.typed-cursor {
+  font-size: 6rem;
+  color: #F0CEA0;
+}
+
+
+ /* tablet & mobile */
+ @media screen and (max-width: 818px) {
+  #elementsecond {
+    font-size: 2.5rem;
+  }
+
+  .typed-cursor {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #elementsecond {
+    font-size: 1.6rem;
+  }
+
+  .typed-cursor {
+    font-size: 2.2rem;
+  }
+
+}
+
+
+
+
+
+
+

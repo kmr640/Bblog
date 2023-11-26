@@ -1,0 +1,123 @@
+<%- include ('./partials/header.ejs') %>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Bblog.</div>
+        <div class="nav__menu">
+          
+          <ul role="list" class="nav__menu-ul">
+            <li role="listitem">
+              <i class="ri-arrow-right-line"></i>
+              <a href="/dashboard" target="_blank">go to Dashboard</a>
+            </li>
+            <li role="listitem" onclick="allFeatures()">
+              <a href="#">Features</a>
+            </li>
+            <li role="listitem" onclick="contactPage()">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__cta">
+          <button type="button" onclick="login()">Login</button>
+        </div>
+      </nav>
+    </header>
+
+    
+    <div class="grid-container">
+     
+      <section class="hero">
+        <div class="hero__text">
+          <h1 id="element"></h1>
+        </div>
+        <div class="hero__cards">
+          <div class="card-1">
+            <img src="/assets/images/image-1.png" alt="image-1">
+          </div>
+          <div class="card-2">
+            <video autoplay loop muted width="318px">
+              <source src="/assets/images/video-2.mp4" type="video/mp4">
+          </div>
+          <div class="card-3">
+            <img src="/assets/images/image-3.png" alt="image-3">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="popup-container">
+      <div class="popup-image">
+        <video autoplay loop muted width="360" height="541">
+          <source src="/assets/images/video-popup.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="popup-modal">
+        <i class="ri-close-line" onclick="closeModal()"></i>
+        <p>
+          <span onclick="login()" id="loginModal">Login</span> | <span onclick="register()" id="registerModal">Register</span>
+        </p>
+        <h3>Hello Again!</h3>
+        <h4>Welcome Back</h4>
+        <div class="popup-name">
+          <i class="ri-user-3-line"></i>
+          <input type="text" placeholder="Name" id="name" name="name" aria-label="name">
+        </div>
+        <div class="popup-email">
+          <i class="ri-mail-line"></i>
+          <input type="text" placeholder="Email Address" id="email" name="email" aria-label="email">
+        </div>
+        <div class="popup-password">
+          <i class="ri-lock-password-fill"></i>
+          <input type="password" placeholder="Password" id="password" name="password" aria-label="password">
+        </div>
+        <button id="submit" onclick="registerUser()" class="btn-login" type="submit">Login</button>
+        <p id="forgotpass" onclick="forgotPassword()">
+          <a href="#">Forgot Password?</a>
+        </p>
+        <p style="margin: 12px;"> OR Login As:</p>
+        <div onclick="loginAs()" class="login-as" id="user-avatar-example">
+          <img src="/assets/images/user-avatar-example.png" alt="Jane Doe" width="42px" height="42px">
+        </div>
+      </div>
+    </div>
+    <div class="popup-feature">
+      <i class="ri-close-line" id="feature-close" onclick="closeFeature()"></i>
+      <div class="feature-content">
+        <div class="pdf">
+          <i class="ri-file-pdf-2-line"></i>
+          <p>Export to PDF with Ease</p>
+        </div>
+        <div class="media">
+          <i class="ri-file-image-line"></i>
+          <p>Media integration jpg and png</p>
+        </div>
+        <div class="text">
+          <i class="ri-file-text-line"></i>
+          <p>Export to text Easily</p>
+        </div>
+        <div class="cloud">
+          <i class="ri-upload-cloud-2-line"></i>
+          <p>Effortless cloud sync</p>
+        </div>
+      </div>
+    </div>
+    <div class="popup-contact">
+      <i class="ri-close-line" id="contact-close" onclick="closeContact()"></i>
+      <div class="feature-contact">
+        <div class="popup-email-contact">
+          <i class="ri-mail-line"></i>
+          <input type="text" placeholder="Email Address" id="email-contact" name="email" aria-label="emailsend">
+        </div>
+        <div class="contact-textarea">
+          <textarea id="textarea-contact" name="textarea-contact">Write your comment...</textarea>
+        </div>
+        <button id="submit-contact" class="btn-contact" onclick="sendEmail()">Submit</button>
+      </div>
+    </div>
+    <div class="alerting" id="alerting" onclick="forgotPassword()">
+      <div class="alert-popup"></div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="/assets/js/typed.js"></script>
+    <script src="/assets/js/main.js"></script>
+<%- include ('./partials/footer.ejs') %>
