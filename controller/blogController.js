@@ -5,6 +5,7 @@ const Blog = (req, res) => {
         blog: req.body.blog,
         user: req.user._id
       });
+     
   
       newBlog.save(function(err) {
         if (err) {

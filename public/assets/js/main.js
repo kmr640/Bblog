@@ -269,6 +269,8 @@ function validateContactEmail() {
 //     });
 //   }
 function succesEmail() {
+  const alerts = document.getElementById("alerting");
+    const alertPopup = document.querySelector(".alert-popup");
     alertPopup.style.backgroundColor = "#baf9b8";
           alertPopup.style.border = "2px solid green";
           alertPopup.style.color = "rgb(30, 144, 15)";
@@ -297,7 +299,7 @@ function sendEmail() {
         };
     
         try {
-          const response = await fetch('/', {
+          const response = await fetch('/sendemail', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

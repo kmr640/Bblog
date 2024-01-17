@@ -21,6 +21,7 @@ const fileFilter = function (req, file, cb) {
   };
 
   const uploadMiddleware = multer({ 
+    limits: { fileSize: 1024 * 1024 * 20 },
     storage: storage, 
     fileFilter: fileFilter 
   }).single('profileImage');
